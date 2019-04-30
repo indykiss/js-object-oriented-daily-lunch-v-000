@@ -22,7 +22,7 @@ class Neighborhood {
     return store.customers.filter(
       function(customer) {
         return customer.neighborhoodID === this.id;
-      }.bind(this)
+      }.bind(this);
     );
   }
 
@@ -43,6 +43,6 @@ let customerID = 0;
 
 class Customer {
   constructor(name) {
-    this.id = ++ customerID 
+    this.id = ++ customerID
   }
 }
