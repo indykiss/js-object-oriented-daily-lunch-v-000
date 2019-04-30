@@ -69,7 +69,7 @@ class Customer {
   totalSpent() {
     let result = 0;
     let prices = [];
-    for (let = i; i < this.meals().length; i++) {
+    for (let i = 0; i < this.meals().length; i++) {
       result.push(deliveries[i].meal());
     }
     return result;
