@@ -53,7 +53,7 @@ class Customer {
     return store.deliveries.filter(
       function(delivery) {
         return delivery.customerID === this.id;
-      }
+      }.bind(this);
     )
   }
 
