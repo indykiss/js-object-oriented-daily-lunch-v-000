@@ -42,5 +42,7 @@ class Neighborhood {
 let customerID = 0;
 
 class Customer {
-
+  constructor(name) {
+    this.id = ++ customerID 
+  }
 }
