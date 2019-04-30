@@ -31,7 +31,7 @@ class Neighborhood() {
     let result = [];
     for (let i = 0; i < deliveries.length; i++) {
       if (result.includes(deliveries[i].meal()) === false) {
-        result.push(deliveries[i].meal())
+        result.push(deliveries[i].meal());
       }
     }
     return result;
