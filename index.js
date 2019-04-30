@@ -112,3 +112,21 @@ class Meal {
     return sortedMeals;
   }
 }
+
+
+let deliveryID = 0;
+class Delivery {
+
+  constructor(mealID, neighborhoodID, customerID) {
+    this.id = ++ deliveryID;
+    this.mealID = mealID;
+    this.neighborhoodID = neighborhoodID;
+    this.customerID = customerID;
+    store.deliveries.push(this);
+
+  }
+
+
+
+
+}
