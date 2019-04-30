@@ -137,7 +137,7 @@ class Delivery {
     return store.customers.find(
       function(customer) {
         return customer.ID === this.customerID;
-      }
+      }.bind(this);
     )
   }
 
