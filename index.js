@@ -1,8 +1,6 @@
 // global datastore
 let store = { neighborhoods: [], meals: [], customers: [], deliveries: [] };
-
-let neighborhoodId = 0
-
+let neighborhoodId = 0;
 class Neighborhood {
   constructor(name) {
     this.id = ++neighborhoodId;
@@ -10,11 +8,11 @@ class Neighborhood {
     store.neighborhoods.push(this);
   }
 
-  deliveries(){
+  deliveries() {
     return store.deliveries.filter(
       function(delivery) {
         return delivery.neighborhoodId === this.id;
-      }.bind(this);
+      }.bind(this)
     );
   }
 
@@ -22,7 +20,7 @@ class Neighborhood {
     return store.customers.filter(
       function(customer) {
         return customer.neighborhoodId === this.id;
-      }.bind(this);
+      }.bind(this)
     );
   }
 
@@ -38,14 +36,12 @@ class Neighborhood {
   }
 }
 
-
 let customerId = 0;
-
 class Customer {
-  constructor(name, neighboorhoodId) {
+  constructor(name, neighborhoodId) {
     this.id = ++customerId;
     this.name = name;
-    this.neighboorhoodId = neighboorhoodId;
+    this.neighborhoodId = neighborhoodId;
     store.customers.push(this);
   }
 
@@ -53,7 +49,7 @@ class Customer {
     return store.deliveries.filter(
       function(delivery) {
         return delivery.customerId === this.id;
-      }.bind(this);
+      }.bind(this)
     );
   }
 
@@ -68,8 +64,8 @@ class Customer {
 
   totalSpent() {
     let result = 0;
-    let prices = [];
-    for (let i = 0; i < this.meals().length; i++) {
+    let prices = []
+    for (let i=0; i < this.meals().length; i++) {
       prices.push(this.meals()[i].price);
     }
     const add = (a,b) =>
@@ -79,11 +75,9 @@ class Customer {
   }
 }
 
-
 let mealId = 0;
 class Meal {
-
-  constructor(title,price) {
+  constructor(title, price) {
     this.id = ++mealId;
     this.title = title;
     this.price = Number(price);
@@ -93,7 +87,7 @@ class Meal {
   deliveries() {
     return store.deliveries.filter(
       function(delivery) {
-        return delivery.meal() === this;
+        return delivery.meal() === this
       }.bind(this)
     );
   }
@@ -108,17 +102,15 @@ class Meal {
   }
 
   static byPrice() {
-    let sortedMeals = store.meals.sort((a,b) => (a.price> b.price) ? -1: 1);
+    let sortedMeals = store.meals.sort((a,b) => (a.price > b.price) ? -1 : 1);
     return sortedMeals;
   }
 }
 
-
 let deliveryId = 0;
 class Delivery {
-
   constructor(mealId, neighborhoodId, customerId) {
-    this.id = ++ deliveryId;
+    this.id = ++deliveryId;
     this.mealId = mealId;
     this.neighborhoodId = neighborhoodId;
     this.customerId = customerId;
@@ -137,7 +129,7 @@ class Delivery {
     return store.customers.find(
       function(customer) {
         return customer.id === this.customerId;
-      }.bind(this);
+      }.bind(this)
     );
   }
 
@@ -148,5 +140,4 @@ class Delivery {
       }.bind(this)
     );
   }
-
 }
