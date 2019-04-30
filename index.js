@@ -43,7 +43,7 @@ let customerId = 0;
 
 class Customer {
   constructor(name, neighboorhoodId) {
-    this.Id = ++customerId;
+    this.id = ++customerId;
     this.name = name;
     this.neighboorhoodId = neighboorhoodId;
     store.customers.push(this);
