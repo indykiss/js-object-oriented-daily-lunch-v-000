@@ -38,4 +38,7 @@ class Neighborhood() {
   }
 }
 
-let customerID = 0
+let customerID = 0;
+class Customer {
+  
+}
