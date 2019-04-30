@@ -29,7 +29,7 @@ class Neighborhood() {
   meals() {
     let deliveries = this.deliveries();
     let result = [];
-    
+    for (let i = 0; i < deliveries.length; i++)
   }
 
 
