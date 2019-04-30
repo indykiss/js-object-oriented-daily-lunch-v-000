@@ -1,11 +1,11 @@
 // global datastore
 let store = { neighborhoods: [], meals: [], customers: [], deliveries: [] };
 
-let neighborhoodID = 0
+let neighborhoodId = 0
 
 class Neighborhood {
   constructor(name) {
-    this.id = ++neighborhoodID;
+    this.Id = ++neighborhoodId;
     this.name = name;
     store.neighborhoods.push(this);
   }
@@ -13,7 +13,7 @@ class Neighborhood {
   deliveries(){
     return store.deliveries.filter(
       function(delivery) {
-        return delivery.neighborhoodID === this.id;
+        return delivery.neighborhoodId === this.Id;
       }.bind(this);
     );
   }
@@ -21,7 +21,7 @@ class Neighborhood {
   customers() {
     return store.customers.filter(
       function(customer) {
-        return customer.neighborhoodID === this.id;
+        return customer.neighborhoodId === this.Id;
       }.bind(this);
     );
   }
@@ -39,20 +39,20 @@ class Neighborhood {
 }
 
 
-let customerID = 0;
+let customerId = 0;
 
 class Customer {
-  constructor(name, neighboorhoodID) {
-    this.id = ++customerID;
+  constructor(name, neighboorhoodId) {
+    this.Id = ++customerId;
     this.name = name;
-    this.neighboorhoodID = neighboorhoodID;
+    this.neighboorhoodId = neighboorhoodId;
     store.customers.push(this);
   }
 
   deliveries() {
     return store.deliveries.filter(
       function(delivery) {
-        return delivery.customerID === this.id;
+        return delivery.customerId === this.Id;
       }.bind(this);
     );
   }
@@ -80,11 +80,11 @@ class Customer {
 }
 
 
-let mealID = 0;
+let mealId = 0;
 class Meal {
 
   constructor(title,price) {
-    this.is = ++mealID;
+    this.is = ++mealId;
     this.title = title;
     this.price = Number(price);
     store.meals.push(this);
@@ -114,21 +114,21 @@ class Meal {
 }
 
 
-let deliveryID = 0;
+let deliveryId = 0;
 class Delivery {
 
-  constructor(mealID, neighborhoodID, customerID) {
-    this.id = ++ deliveryID;
-    this.mealID = mealID;
-    this.neighborhoodID = neighborhoodID;
-    this.customerID = customerID;
+  constructor(mealId, neighborhoodId, customerId) {
+    this.Id = ++ deliveryId;
+    this.mealId = mealId;
+    this.neighborhoodId = neighborhoodId;
+    this.customerId = customerId;
     store.deliveries.push(this);
   }
 
   meal() {
     return store.meals.find(
       function(meal) {
-        return meal.id === this.mealID;
+        return meal.Id === this.mealId;
       }.bind(this)
     );
   }
@@ -136,15 +136,15 @@ class Delivery {
   customer() {
     return store.customers.find(
       function(customer) {
-        return customer.ID === this.customerID;
+        return customer.Id === this.customerId;
       }.bind(this);
     );
   }
 
-  neighboorhoodID() {
+  neighboorhoodId() {
     return store.neighborhoods.find(
       function(neighborhood) {
-        return neighborhood.ID === this.neighborhoodID;
+        return neighborhood.Id === this.neighborhoodId;
       }.bind(this)
     );
   }
