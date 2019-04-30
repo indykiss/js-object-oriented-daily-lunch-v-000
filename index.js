@@ -138,7 +138,7 @@ class Delivery {
       function(customer) {
         return customer.ID === this.customerID;
       }.bind(this);
-    )
+    );
   }
 
 
