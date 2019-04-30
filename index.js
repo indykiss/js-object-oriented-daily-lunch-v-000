@@ -43,6 +43,7 @@ let customerID = 0;
 
 class Customer {
   constructor(name) {
-    this.id = ++ customerID
+    this.id = ++ customerID;
+    this.name = name; 
   }
 }
