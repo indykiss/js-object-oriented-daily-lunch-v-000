@@ -98,6 +98,9 @@ class Meal {
     );
   }
 
-  
+  customers() {
+    let deliveries = this.deliveries();
+    let result = [];
+  }
 
 }
