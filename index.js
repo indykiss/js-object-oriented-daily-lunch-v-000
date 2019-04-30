@@ -26,5 +26,10 @@ class Neighborhood() {
     );
   }
 
+  meals() {
+    let deliveries = this.deliveries();
+    
+  }
+
 
 }
