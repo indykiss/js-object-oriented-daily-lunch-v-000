@@ -133,7 +133,13 @@ class Delivery {
     );
   }
 
-  
+  customer() {
+    return store.customers.find(
+      function(customer) {
+        return customer.ID === this.customerID;
+      }
+    )
+  }
 
 
 
