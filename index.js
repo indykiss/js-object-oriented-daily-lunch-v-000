@@ -146,7 +146,7 @@ class Delivery {
       function(neighborhood) {
         return neighborhood.ID === this.neighborhoodID;
       }.bind(this)
-    )
+    );
   }
 
 }
