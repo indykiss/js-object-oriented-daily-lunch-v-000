@@ -66,5 +66,14 @@ class Customer {
     return result;
   }
 
+  totalSpent() {
+    let result = 0;
+    let prices = [];
+    for (let = i; i < deliveries.length; i++) {
+      result.push(deliveries[i].meal());
+    }
+    return result;
+  }
+
 
 }
