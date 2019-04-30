@@ -30,7 +30,7 @@ class Neighborhood() {
     let deliveries = this.deliveries();
     let result = [];
     for (let i = 0; i < deliveries.length; i++) {
-      
+      if (result.includes(deliveries[i].meal()) === false)
     }
   }
 
