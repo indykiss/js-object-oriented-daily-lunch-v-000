@@ -46,5 +46,6 @@ class Customer {
     this.id = ++ customerID;
     this.name = name;
     this.neighboorhoodID = neighboorhoodID;
+    store.customers.push(this);
   }
 }
