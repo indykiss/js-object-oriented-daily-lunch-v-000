@@ -78,6 +78,7 @@ class Customer {
   }
 }
 
+
 let mealId = 0;
 class Meal {
   constructor(title, price) {
