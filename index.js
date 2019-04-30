@@ -83,4 +83,12 @@ class Customer {
 let mealID = 0;
 class Meal {
 
+  constructor(title,price) {
+    this.is = ++mealID;
+    this.title = title;
+    this.price = Number(price);
+    
+  }
+
+
 }
