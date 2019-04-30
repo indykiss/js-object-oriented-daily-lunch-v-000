@@ -43,9 +43,14 @@ let customerID = 0;
 
 class Customer {
   constructor(name, neighboorhoodID) {
-    this.id = ++ customerID;
+    this.id = ++customerID;
     this.name = name;
     this.neighboorhoodID = neighboorhoodID;
     store.customers.push(this);
   }
+
+  deliveries() {
+
+  }
+
 }
