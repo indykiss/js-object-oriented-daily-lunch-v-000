@@ -37,3 +37,5 @@ class Neighborhood() {
     return result;
   }
 }
+
+let customerID = 0
