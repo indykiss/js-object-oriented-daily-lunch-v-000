@@ -144,7 +144,7 @@ class Delivery {
   neighboorhoodID() {
     return store.neighborhoods.find(
       function(neighborhood) {
-        return neighborhood.id === this.neighborhoodID; 
+        return neighborhood.ID === this.neighborhoodID; 
       }
     )
   }
