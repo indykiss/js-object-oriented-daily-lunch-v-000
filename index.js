@@ -21,7 +21,7 @@ class Neighborhood() {
   customers() {
     return store.customers.filter(
       function(customer) {
-        return
+        return customer.neighborhoodID === this.id
       }
     );
   }
