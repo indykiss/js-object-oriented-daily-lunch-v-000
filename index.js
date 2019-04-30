@@ -42,9 +42,9 @@ class Neighborhood {
 let customerID = 0;
 
 class Customer {
-  constructor(name) {
+  constructor(name, ) {
     this.id = ++ customerID;
     this.name = name;
-    this.neighboorhoodID = 
+    this.neighboorhoodID =
   }
 }
