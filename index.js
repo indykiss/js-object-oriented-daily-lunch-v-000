@@ -34,6 +34,7 @@ class Neighborhood() {
         result.push(deliveries[i].meal)
       }
     }
+    return result;
   }
 
 
