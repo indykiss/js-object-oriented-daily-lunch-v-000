@@ -123,7 +123,14 @@ class Delivery {
     this.neighborhoodID = neighborhoodID;
     this.customerID = customerID;
     store.deliveries.push(this);
+  }
 
+  meal() {
+    return store.meals.find(
+      function(meal) {
+        return meal.id === this.mealID;
+      }.bind(this)
+    )
   }
 
 
