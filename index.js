@@ -28,7 +28,7 @@ class Neighborhood() {
 
   meals() {
     let deliveries = this.deliveries();
-    
+    let result = [];
   }
 
 
