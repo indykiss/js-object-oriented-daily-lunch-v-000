@@ -70,7 +70,7 @@ class Customer {
     let result = 0;
     let prices = [];
     for (let i = 0; i < this.meals().length; i++) {
-      result.push(deliveries[i].meal());
+      prices.push(deliveries[i].meal());
     }
     return result;
   }
