@@ -130,7 +130,7 @@ class Delivery {
       function(meal) {
         return meal.id === this.mealID;
       }.bind(this)
-    )
+    );
   }
 
 
