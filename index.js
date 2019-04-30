@@ -75,7 +75,9 @@ class Customer {
     const add = (a,b) =>
       a+b
     result = prices.reduce(add);
-    return result;  }
+    return result;
+  }
+  }
 
 
 }
