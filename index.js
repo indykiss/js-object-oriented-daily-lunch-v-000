@@ -72,8 +72,10 @@ class Customer {
     for (let i = 0; i < this.meals().length; i++) {
       prices.push(this.meals()[i].price);
     }
-    return result;
-  }
+    const add = (a,b) =>
+      a+b
+    result = prices.reduce(add);
+    return result;  }
 
 
 }
