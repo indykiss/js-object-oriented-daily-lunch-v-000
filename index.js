@@ -87,7 +87,7 @@ class Meal {
     this.is = ++mealID;
     this.title = title;
     this.price = Number(price);
-    
+    store.meals.push(this); 
   }
 
 
