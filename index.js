@@ -60,7 +60,7 @@ class Customer {
   meals() {
     let deliveries = this.deliveries();
     let result = [];
-    for (let = i; i < deliveries.length; i++) {
+    for (let i = 0; i < deliveries.length; i++) {
       result.push(deliveries[i].meal());
     }
     return result;
