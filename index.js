@@ -87,8 +87,15 @@ class Meal {
     this.is = ++mealID;
     this.title = title;
     this.price = Number(price);
-    store.meals.push(this); 
+    store.meals.push(this);
   }
 
+  deliveries() {
+    return store.deliveries.filter(
+      function(delivery) {
+        return delivery.meal() === this;
+      }.bind(this)
+    );
+  }
 
 }
