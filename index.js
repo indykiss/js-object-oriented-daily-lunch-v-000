@@ -57,4 +57,11 @@ class Customer {
     );
   }
 
+  meals() {
+    let deliveries = this.deliveries();
+    let result = [];
+    
+  }
+
+
 }
