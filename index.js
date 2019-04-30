@@ -76,7 +76,7 @@ class Customer {
       a+b
     result = prices.reduce(add);
     return result;
-  }
+    }
   }
 
 
