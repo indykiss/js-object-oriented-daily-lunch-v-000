@@ -141,7 +141,7 @@ class Delivery {
     );
   }
 
-  neighboorhood() {
+  neighborhood() {
     return store.neighborhoods.find(
       function(neighborhood) {
         return neighborhood.Id === this.neighborhoodId;
