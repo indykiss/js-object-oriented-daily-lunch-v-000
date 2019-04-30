@@ -136,7 +136,7 @@ class Delivery {
   customer() {
     return store.customers.find(
       function(customer) {
-        return customer.Id === this.customerId;
+        return customer.id === this.customerId;
       }.bind(this);
     );
   }
@@ -144,7 +144,7 @@ class Delivery {
   neighborhood() {
     return store.neighborhoods.find(
       function(neighborhood) {
-        return neighborhood.Id === this.neighborhoodId;
+        return neighborhood.id === this.neighborhoodId;
       }.bind(this)
     );
   }
