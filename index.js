@@ -54,7 +54,7 @@ class Customer {
       function(delivery) {
         return delivery.customerID === this.id;
       }.bind(this);
-    )
+    );
   }
 
 }
