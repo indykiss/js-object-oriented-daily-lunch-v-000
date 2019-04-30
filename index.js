@@ -77,12 +77,11 @@ class Customer {
     result = prices.reduce(add);
     return result;
   }
+
 }
 
-let mealID = 0; 
+
+let mealID = 0;
 class Meal {
-  
+
 }
-
-
-
